@@ -1,0 +1,4 @@
+tag: ko
+label: 전원 버튼 잠금
+description: 물리 버튼의 동작 여부를 설정한다.
+options: {}

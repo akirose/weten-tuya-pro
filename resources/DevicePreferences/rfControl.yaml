@@ -1,0 +1,10 @@
+name: rfControl
+title: RF remote control
+description: Enables/disables RF 433 remote control.
+required: true
+preferenceType: enumeration
+definition:
+  options:
+    on: "Enable remote control"
+    off: "Disable remote control"
+  default: "on"

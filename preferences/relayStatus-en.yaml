@@ -1,8 +1,0 @@
-tag: en
-label: Power on behavior
-description: Restore after AC power loss
-options:
-  off:
-    label: 'OFF'
-  on:
-    label: 'ON'

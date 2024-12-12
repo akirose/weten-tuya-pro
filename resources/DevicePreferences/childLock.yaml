@@ -1,0 +1,7 @@
+name: childLock
+title: Child Lock
+description: Enables/disables physical input on the device.
+required: true
+preferenceType: boolean
+definition:
+  default: false

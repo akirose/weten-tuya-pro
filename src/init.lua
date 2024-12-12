@@ -77,11 +77,11 @@ end
 
 -- Device lifecycle handlers
 local function device_added(driver, device)
-    send_tuya_command(device, DP_BUZZER_FEEDBACK, DP_TYPE_BOOL, device.preferences.buzzer and "\x01" or "\x00")
-    send_tuya_command(device, DP_CHILD_LOCK, DP_TYPE_BOOL, device.preferences.childLock and "\x01" or "\x00")
+    send_tuya_command(device, DP_BUZZER_FEEDBACK, DP_TYPE_BOOL, device.preferences["detailprepare34568.buzzerFeedback"] and "\x01" or "\x00")
     send_tuya_command(device, DP_POWER_ON_BEHAVIOR, DP_TYPE_ENUM, device.preferences["detailprepare34568.relayStatus"] == "off" and "\x00" or "\x01")
-    send_tuya_command(device, DP_RF_CONTROL, DP_TYPE_ENUM, device.preferences.rfControl == "ON" and "\x00" or "\x01")
-    send_tuya_command(device, DP_CHILD_LOCK, DP_TYPE_BOOL, device.preferences.childLock and "\x01" or "\x00")
+    send_tuya_command(device, DP_RF_CONTROL, DP_TYPE_ENUM, device.preferences["detailprepare34568.rfControl"] == "on" and "\x00" or "\x01")
+    send_tuya_command(device, DP_RF_PAIRING, DP_TYPE_BOOL, device.preferences["detailprepare34568.rfPairing"] and "\x01" or "\x00")
+    send_tuya_command(device, DP_CHILD_LOCK, DP_TYPE_BOOL, device.preferences["detailprepare34568.childLock"] and "\x01" or "\x00")
 end
 
 local function device_init(driver, device)
@@ -89,22 +89,20 @@ local function device_init(driver, device)
 end
 
 local function device_info_changed(driver, device, event, args)
-    log.debug(args.old_st_store.preferences["detailprepare34568.relayStatus"])
-    log.debug(device.preferences["detailprepare34568.relayStatus"])
     if args.old_st_store.preferences["detailprepare34568.relayStatus"] ~= device.preferences["detailprepare34568.relayStatus"] then
         send_tuya_command(device, DP_POWER_ON_BEHAVIOR, DP_TYPE_ENUM, device.preferences["detailprepare34568.relayStatus"] == "off" and "\x00" or "\x01")
     end
-    if args.old_st_store.preferences.rfControl ~= device.preferences.rfControl then
-        send_tuya_command(device, DP_RF_CONTROL, DP_TYPE_ENUM, device.preferences.rfControl == "ON" and "\x00" or "\x01")
+    if args.old_st_store.preferences["detailprepare34568.rfControl"] ~= device.preferences["detailprepare34568.rfControl"] then
+        send_tuya_command(device, DP_RF_CONTROL, DP_TYPE_ENUM, device.preferences["detailprepare34568.rfControl"] == "on" and "\x00" or "\x01")
     end
-    if args.old_st_store.preferences.rfPairing ~= device.preferences.rfPairing then
-        send_tuya_command(device, DP_RF_PAIRING, DP_TYPE_BOOL, device.preferences.rfPairing and "\x01" or "\x00")
+    if args.old_st_store.preferences["detailprepare34568.rfPairing"] ~= device.preferences["detailprepare34568.rfPairing"] then
+        send_tuya_command(device, DP_RF_PAIRING, DP_TYPE_BOOL, device.preferences["detailprepare34568.rfPairing"] and "\x01" or "\x00")
     end
-    if args.old_st_store.preferences.buzzer ~= device.preferences.buzzer then
-        send_tuya_command(device, DP_BUZZER_FEEDBACK, DP_TYPE_BOOL, device.preferences.buzzer and "\x01" or "\x00")
+    if args.old_st_store.preferences["detailprepare34568.buzzerFeedback"] ~= device.preferences["detailprepare34568.buzzerFeedback"] then
+        send_tuya_command(device, DP_BUZZER_FEEDBACK, DP_TYPE_BOOL, device.preferences["detailprepare34568.buzzerFeedback"] and "\x01" or "\x00")
     end
-    if args.old_st_store.preferences.childLock ~= device.preferences.childLock then
-        send_tuya_command(device, DP_CHILD_LOCK, DP_TYPE_BOOL, device.preferences.childLock and "\x01" or "\x00")
+    if args.old_st_store.preferences["detailprepare34568.childLock"] ~= device.preferences["detailprepare34568.childLock"] then
+        send_tuya_command(device, DP_CHILD_LOCK, DP_TYPE_BOOL, device.preferences["detailprepare34568.childLock"] and "\x01" or "\x00")
     end
 end
 

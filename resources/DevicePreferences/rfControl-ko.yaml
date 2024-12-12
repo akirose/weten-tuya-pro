@@ -1,0 +1,8 @@
+tag: ko
+label: 무선 리모컨 사용
+description: RF 433 무선 리모컨 사용 여부
+options:
+  off:
+    label: '미사용'
+  on:
+    label: '사용'

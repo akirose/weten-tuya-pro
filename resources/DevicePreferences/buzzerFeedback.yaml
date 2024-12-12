@@ -1,0 +1,7 @@
+name: buzzerFeedback
+title: Buzzer feedback
+description: Enable buzzer feedback.
+required: true
+preferenceType: boolean
+definition:
+  default: false

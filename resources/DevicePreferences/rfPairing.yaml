@@ -1,0 +1,7 @@
+name: rfPairing
+title: RF study
+description: Enables/disables RF 433 remote pairing mode.
+required: true
+preferenceType: boolean
+definition:
+  default: false
