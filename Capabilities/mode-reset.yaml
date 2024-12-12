@@ -1,0 +1,29 @@
+name: Mode Reset
+attributes:
+  modeReset:
+    schema:
+      type: object
+      properties:
+        value:
+          title: modeReset
+          type: string
+          enum:
+            - unused
+            - reset
+            - forceReset
+      additionalProperties: false
+      required: 
+        - value
+    setter: set
+commands:
+  set:
+    name: set
+    arguments:
+      - name: modeReset
+        optional: false
+        schema:
+          type: string
+          enum:
+            - unused
+            - reset
+            - forceReset

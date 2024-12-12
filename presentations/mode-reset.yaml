@@ -1,0 +1,32 @@
+id: detailprepare34568.modeReset
+version: 1
+detailView:
+  - label: "{{i18n.label}}"
+    displayType: list
+    list:
+      command:
+        name: set
+        alternatives:
+          - key: unused
+            value: "-"
+            type: inactive
+          - key: reset
+            value: "{{i18n.attributes.modeReset.i18n.value.reset.label}}"
+            type: active
+          - key: forceReset
+            value: "{{i18n.attributes.modeReset.i18n.value.forceReset.label}}"
+            type: active
+        argumentType: string
+      state:
+        value: modeReset.value
+        valueType: string
+        alternatives:
+          - key: unused
+            value: "-"
+            type: inactive
+          - key: reset
+            value: "{{i18n.attributes.modeReset.i18n.value.reset.label}}"
+            type: active
+          - key: forceReset
+            value: "{{i18n.attributes.modeReset.i18n.value.forceReset.label}}"
+            type: active

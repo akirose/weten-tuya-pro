@@ -1,0 +1,49 @@
+name: weten-tuya-pro
+metadata:
+  manufacturerName: WETEN
+components:
+  - id: main
+    capabilities:
+      - id: switch
+        version: 1
+      - id: refresh
+        version: 1
+      - id: detailprepare34568.modeReset
+        version: 1
+    categories:
+      - name: Switch
+
+preferences:
+  - preferenceId: detailprepare34568.relayStatus
+    explicit: true
+  - name: rfControl
+    title: RF remote control
+    description: Enables/disables RF 433 remote control.
+    required: true
+    preferenceType: enumeration
+    definition:
+      options:
+        ON: "Enable remote control"
+        OFF: "Disable remote control"
+      default: "ON"
+  - name: rfPairing
+    title: RF study
+    description: Enables/disables RF 433 remote pairing mode.
+    required: true
+    preferenceType: boolean
+    definition:
+      default: false
+  - name: childLock
+    title: Child Lock
+    description: Enables/disables physical input on the device.
+    required: true
+    preferenceType: boolean
+    definition:
+      default: false
+  - name: buzzer
+    title: Buzzer feedback
+    description: Enable buzzer feedback.
+    required: true
+    preferenceType: boolean
+    definition:
+      default: false

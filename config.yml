@@ -1,0 +1,6 @@
+name: 'WETEN Tuya Pro'
+packageKey: 'weten-tuya-pro'
+permissions:
+  zigbee: {}
+description: "SmartThings driver for Weten Tuya Pro(Remote Control PCI E Card for PC)"
+vendorSupportInformation: "https://support.smartthings.com"

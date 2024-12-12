@@ -1,0 +1,20 @@
+{
+  "tag": "en",
+  "label": "Reset",
+  "attributes": {
+    "modeReset": {
+      "label": "Mode Reset",
+      "displayTemplate": "{{value}}",
+      "i18n": {
+        "value": {
+          "reset": {
+            "label": "Reset"
+          },
+          "forceReset": {
+            "label": "Force Reset"
+          }
+        }
+      }
+    }
+  }
+}

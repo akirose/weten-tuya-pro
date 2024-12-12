@@ -1,0 +1,6 @@
+zigbeeManufacturer:
+  - id: "_TZE204_6fk3gewc/TS0601"
+    deviceLabel: "Tuya Pro PCI-E"
+    manufacturer: _TZE204_6fk3gewc
+    model: TS0601
+    deviceProfileName: weten-tuya-pro

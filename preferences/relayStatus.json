@@ -1,0 +1,14 @@
+{
+    "name": "relayStatus",
+    "title": "Power on behavior",
+    "description": "Restore after AC power loss",
+    "required": true,
+    "preferenceType": "enumeration",
+    "definition": {
+        "options": {
+            "off": "OFF",
+            "on": "ON"
+        },
+        "default": "off"
+    }
+}

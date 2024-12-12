@@ -1,0 +1,8 @@
+tag: ko
+label: 정전 후 자동 전원 복구
+description: 정전 복구 후 컴퓨터의 전원을 켠다.
+options:
+  off:
+    label: '미사용'
+  on:
+    label: '사용'

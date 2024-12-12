@@ -1,0 +1,20 @@
+{
+  "tag": "ko",
+  "label": "재시동",
+  "attributes": {
+    "modeReset": {
+      "label": "재시동",
+      "displayTemplate": "{{value}}",
+      "i18n": {
+        "value": {
+          "reset": {
+            "label": "재시동"
+          },
+          "forceReset": {
+            "label": "강제 재시동"
+          }
+        }
+      }
+    }
+  }
+}
